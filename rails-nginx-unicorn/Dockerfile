@@ -33,7 +33,6 @@ RUN apt-get install -qq -y libmysqlclient-dev
 # Install Rails App
 WORKDIR /app
 ONBUILD ADD Gemfile /app/Gemfile
-ONBUILD ADD Gemfile.lock /app/Gemfile.lock
 ONBUILD RUN bundle install --without development test
 ONBUILD ADD . /app
 
